@@ -6,6 +6,9 @@ body, html {
   height: 100%;
   margin: 0;
   overflow: hidden;
+  background-image: linear-gradient(to bottom, #8313e7, #ff61af, #8313e7);
+    -webkit-text-stroke: 0.01em #94a0b9;
+
 }
 
 
@@ -44,11 +47,16 @@ header {
   background: 
     linear-gradient(transparent 65%, glow 75%, main 80%, glow 85%, transparent 95%),
     linear-gradient(90deg, transparent 65%, glow 75%, main 80%, glow 85%, transparent 95%);
+    border: 6px black solid;
+    border-radius: 15px;
 }
 
 
 .radioToolbar {
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .radioToolbar input[type="radio"] {
@@ -59,16 +67,21 @@ header {
 
 .radioToolbar label {
     display: inline-block;
-    background-color: #ddd;
+    background-color: #032d50;
     padding: 10px 20px;
-    font-family: sans-serif, Arial;
+    margin: 10px;
+    font-family: 'Exo';
     font-size: 16px;
+    color: white;
     border: 2px solid #444;
     border-radius: 4px;
+    width: 52px;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
 }
 
 .radioToolbar label:hover {
-  background-color: #dfd;
+  background-color: #8313e7;
 }
 
 .radioToolbar input[type="radio"]:focus + label {
@@ -76,6 +89,42 @@ header {
 }
 
 .radioToolbar input[type="radio"]:checked + label {
-    background-color: #bfb;
-    border-color: #4c4;
+    background-color: #8313e7;
+    border-color: #59c1fe;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goBut {
+  background-color: #032d50;
+  font-family: 'Exo';
+  font-size: 16px;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 4px;
+  width: 52px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.goBut:hover {
+  background-color: #8313e7;
+  border-color: #59c1fe;
+}
+
+.goBut:active {
+  background-color: #3e8e41;
+  box-shadow: 5px 5px 5px rgb(190, 183, 183);
+  transform: translateY(2px);
 }

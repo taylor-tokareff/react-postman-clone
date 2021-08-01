@@ -16,7 +16,7 @@ const SearchControls = ({ query, onChange }) => (
 
 
     <label htmlFor="query"></label>
-    <input
+    <input className={styles.search}
       id="query"
       type="text"
       placeholder="URL"
@@ -52,8 +52,9 @@ const SearchControls = ({ query, onChange }) => (
 
     </div>
 
-
-    <button>Go!</button>
+    <div className={styles.go}>
+      <button className={styles.goBut}>Go!</button>
+    </div>
 
     <input
       id="raw-JSON"
