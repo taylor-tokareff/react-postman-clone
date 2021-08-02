@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomDisplay component renders bottomDisplay 1`] = `
+<DocumentFragment>
+  <pre
+    class="back"
+  >
+    "name: none"
+  </pre>
+</DocumentFragment>
+`;

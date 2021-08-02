@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sideDisplay component renders ul 1`] = `
+<DocumentFragment>
+  <ul
+    class="back"
+    data-testid="side"
+  />
+</DocumentFragment>
+`;
