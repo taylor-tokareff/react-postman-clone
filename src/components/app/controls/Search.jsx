@@ -3,87 +3,66 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Search.css';
 
-const SearchControls = ({ query, onChange }) => (
-  <>
+const SearchControls = ({ url, method, putBody, onUrlChange,
+  onSubmit, onMethodChange, onPutChange }) => {
 
-    <header>
-      <h1>
-        <span className={styles.first}>POSTMAN</span>
-        <span className={styles.second}>POSTMAN</span>
-      </h1>
-    </header>
+  return (
 
+    <form className="actualForm" onSubmit={onSubmit}>
 
+      <label htmlFor="query"></label>
+      <input placeholder="URL" className={styles.search} value={url} onChange={onUrlChange} />
 
-    <label htmlFor="query"></label>
-    <input className={styles.search}
-      id="query"
-      type="text"
-      placeholder="URL"
-      name="query"
-      value={query}
-      onChange={onChange}
-    />
+      <div className={styles.radioToolbar}>
 
-    <div className={styles.radioToolbar}>
-
-      <input type="radio" name="methods" id="GET" />
-      <label htmlFor="GET">GET</label>
+        <input id="get" type="radio" name="method" value="GET" method={method} onChange={onMethodChange} />
+        <label htmlFor="get">GET</label>
 
 
 
-      <input type="radio" name="methods" id="POST" />
-      <label htmlFor="POST">POST</label>
+        <input id="post" type="radio" name="method" value="POST" method={method} onChange={onMethodChange} />
+        <label htmlFor="post">POST</label>
 
 
 
-      <input type="radio" name="methods" id="PUT" />
-      <label htmlFor="PUT">PUT</label>
+        <input id="put" type="radio" name="method" value="PUT" method={method} onChange={onMethodChange} />
+        <label htmlFor="put">PUT</label>
 
 
 
-      <input type="radio" name="methods" id="PATCH" />
-      <label htmlFor="PATCH">PATCH</label>
+        <input id="patch" type="radio" name="method" value="PATCH" method={method} onChange={onMethodChange} />
+        <label htmlFor="patch">PATCH</label>
 
 
 
-      <input type="radio" name="methods" id="DELETE" />
-      <label htmlFor="DELETE">DELETE</label>
+        <input id="delete" type="radio" name="method" value="DELETE" method={method} onChange={onMethodChange} />
+        <label htmlFor="delete">DELETE</label>
 
-    </div>
+      </div>
 
-    <div className={styles.go}>
-      <button className={styles.goBut}>Go!</button>
-    </div>
+      <div className={styles.go}>
+        <button className={styles.goBut}>Go!</button>
+      </div>
 
-    <input
-      id="raw-JSON"
-      type="text"
-      placeholder="Raw Json Body"
-      name="raw-json"
-    />
-
-    <input
-      id="bottom-display"
-      type="text"
-      placeholder="I am bored please do something"
-      name="bottom-display"
-    />
-
-    <input
-      id="side-display"
-      type="text"
-      placeholder="the things you clicked go here"
-      name="side-display"
-    />
+      <textarea className={styles.raw} placeholder="Raw JSON Body" name="body"
+        value={putBody} onChange={onPutChange}></textarea>
 
 
-  </>
-);
+
+
+    </form>
+
+  );
+};
 
 SearchControls.propTypes = {
-  query: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  url: PropTypes.string,
+  method: PropTypes.string,
+  putBody: PropTypes.string,
+  onUrlChange: PropTypes.func,
+  onSubmit: PropTypes.func,
+  onMethodChange: PropTypes.func,
+  onPutChange: PropTypes.func
 };
 
 export default SearchControls;

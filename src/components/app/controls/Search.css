@@ -128,3 +128,7 @@ header {
   box-shadow: 5px 5px 5px rgb(190, 183, 183);
   transform: translateY(2px);
 }
+
+.raw {
+  display: flex;
+}
