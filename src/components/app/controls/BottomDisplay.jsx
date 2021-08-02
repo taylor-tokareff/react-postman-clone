@@ -1,14 +1,15 @@
 import React from 'react';
-import styles from './PreArea.css';
+import styles from './BottomDisplay.css';
 import PropTypes from 'prop-types';
 
 
-const PreArea = ({ body }) => {
+const BottomDisplay = ({ body }) => {
   return <pre className={styles.back}>{JSON.stringify(body, null, 2)}</pre>;
+
 };
 
-PreArea.propTypes = {
+BottomDisplay.propTypes = {
   body: PropTypes.string.isRequired
 };
 
-export default PreArea;
+export default BottomDisplay;
