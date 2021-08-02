@@ -1,4 +1,21 @@
-body {
+/* .body {
   display: inline-grid;
 
+} */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left {
+  float: left;
+  margin-right: 1em;
+  width: 30%;
+}
+
+.right {
+  float: right;
+  width: 70%;
 }
