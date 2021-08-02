@@ -5,7 +5,7 @@ import SideDisplay from '../components/app/controls/SideDisplay';
 import BottomDisplay from '../components/app/controls/BottomDisplay';
 import { SearchFunction } from '../services/SearchFunction';
 import { setMethod, setUrl } from '../components/app/UtilFunctions.js';
-import './PostMan.css';
+import styles from './PostMan.css';
 
 
 export default class PostMan extends Component {
@@ -49,20 +49,30 @@ export default class PostMan extends Component {
 
     return (
       <>
+        <div className={styles.body}>
+          <Header />
 
-        <Header />
+          <div className={styles.main}>
 
-        <SideDisplay />
+            <div className={styles.left}>
+              <SideDisplay />
+            </div>
 
-        <SearchControls
-          url={url} method={method}
-          putBody={putBody} onUrlChange={this.handleUrlChange}
-          onMethodChange={this.handleMethodChange}
-          onPutChange={this.handlePutChange}
-          onSubmit={this.handleSubmit}
-        />
+            <div className={styles.right}>
+              <SearchControls
+                url={url} method={method}
+                putBody={putBody} onUrlChange={this.handleUrlChange}
+                onMethodChange={this.handleMethodChange}
+                onPutChange={this.handlePutChange}
+                onSubmit={this.handleSubmit}
+              />
 
-        <BottomDisplay body={body} />
+              <BottomDisplay body={body} />
+            </div>
+
+          </div>
+
+        </div>
 
       </>
 
