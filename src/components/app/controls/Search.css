@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #8313e7, #ff61af, #8313e7);
+    -webkit-text-stroke: 0.01em #94a0b9;
+
+}
+
+
+h1 {
+  position: relative;
+  font-family: 'Exo';
+  font-size: 9em;
+  margin: 0;
+  transform: skew(-15deg);
+  letter-spacing: 0.03em;
+}
+
+  .first {
+    display: block;
+    text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 5em #165ff3;
+    -webkit-text-stroke: 0.06em rgba(black, 0.5);
+  }
+  
+  .second {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#032d50 25%, #00a1ef 35%, white 50%, #20125f 50%, #8313e7 55%, #ff61af 75%);
+    -webkit-text-stroke: 0.01em #94a0b9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#59c1fe, #8653df, #5f5af7, #59c1fe );
+  height: 120px;
+  background: 
+    linear-gradient(transparent 65%, glow 75%, main 80%, glow 85%, transparent 95%),
+    linear-gradient(90deg, transparent 65%, glow 75%, main 80%, glow 85%, transparent 95%);
+    border: 6px black solid;
+    border-radius: 15px;
+}
+
+
+.radioToolbar {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radioToolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radioToolbar label {
+    display: inline-block;
+    background-color: #032d50;
+    padding: 10px 20px;
+    margin: 10px;
+    font-family: 'Exo';
+    font-size: 16px;
+    color: white;
+    border: 2px solid #444;
+    border-radius: 4px;
+    width: 52px;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
+}
+
+.radioToolbar label:hover {
+  background-color: #8313e7;
+}
+
+.radioToolbar input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+
+.radioToolbar input[type="radio"]:checked + label {
+    background-color: #8313e7;
+    border-color: #59c1fe;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goBut {
+  background-color: #032d50;
+  font-family: 'Exo';
+  font-size: 16px;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 4px;
+  width: 52px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.goBut:hover {
+  background-color: #8313e7;
+  border-color: #59c1fe;
+}
+
+.goBut:active {
+  background-color: #3e8e41;
+  box-shadow: 5px 5px 5px rgb(190, 183, 183);
+  transform: translateY(2px);
+}
+
+.raw {
+  display: flex;
+}
