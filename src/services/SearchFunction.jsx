@@ -2,10 +2,14 @@ export const SearchFunction = async (url, formMethod, putBody) => {
 
   if (formMethod === 'DELETE' || formMethod === 'GET') {
     const res = await fetch(url, {
-      method: formMethod
+      method: formMethod, headers: {
+        'Content-type': 'application/json'
+      },
     });
 
+
     const json = await res.json();
+
 
     return json;
   } else {

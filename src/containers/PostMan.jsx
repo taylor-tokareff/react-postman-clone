@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import SearchControls from '../components/app/controls/Search';
 import Header from '../components/app/controls/Header';
 import SideDisplay from '../components/app/controls/SideDisplay';
-import PreArea from '../components/app/controls/PreArea';
+import BottomDisplay from '../components/app/controls/BottomDisplay';
 import { SearchFunction } from '../services/SearchFunction';
 import { setMethod, setUrl } from '../components/app/UtilFunctions.js';
-
+import './PostMan.css';
 
 
 export default class PostMan extends Component {
@@ -62,7 +62,7 @@ export default class PostMan extends Component {
           onSubmit={this.handleSubmit}
         />
 
-        <PreArea body={body} />
+        <BottomDisplay body={body} />
 
       </>
 
